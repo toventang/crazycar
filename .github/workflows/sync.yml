@@ -1,0 +1,35 @@
+name: Simple Sync with Latest Commit
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # 每6小时同步一次
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get latest commit hash
+        id: latest_commit
+        run: |
+          # 获取最新提交哈希（前7位）
+          LATEST_SHA=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/source-org/source-repo/commits/main" | \
+            jq -r '.sha[:7]')
+          echo "LATEST_SHA=$LATEST_SHA" >> $GITHUB_OUTPUT
+          echo "Latest commit: $LATEST_SHA"
+
+      - name: Sync files
+        uses: champ-oss/file-sync@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repo: TastSong/CrazyCar
+          files: |
+            # 你的文件列表
+          commit-message: "chore: sync from upstream (${{ steps.latest_commit.outputs.LATEST_SHA }})"
+          pull-request-title: "Sync: ${{ steps.latest_commit.outputs.LATEST_SHA }}"
