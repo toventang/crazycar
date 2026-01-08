@@ -2,7 +2,7 @@ name: Sync from Parent (Fork)
 
 on:
   schedule:
-    - cron: '0 2 * * *'  # 每天凌晨2点
+    - cron: '0 */6 * * *'  # 每6小时同步一次
   workflow_dispatch:
 
 jobs:
@@ -52,7 +52,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           repo: ${{ steps.repo_info.outputs.parent_repo }}
-          branch: ${{ steps.repo_info.outputs.parent_branch }}
+          repo_branch: ${{ steps.repo_info.outputs.parent_branch }}
           commit-message: "chore: sync from parent (${{ steps.repo_info.outputs.latest_commit_sha }})"
 
       - name: Create summary
