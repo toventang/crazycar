@@ -52,8 +52,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           repo: ${{ steps.repo_info.outputs.parent_repo }}
-          files: |
-            # 需要同步的文件列表
+          branch: ${{ steps.repo_info.outputs.parent_branch }}
           commit-message: "chore: sync from parent (${{ steps.repo_info.outputs.latest_commit_sha }})"
 
       - name: Create summary
