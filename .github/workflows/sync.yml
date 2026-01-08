@@ -1,35 +1,92 @@
-name: Simple Sync with Latest Commit
+name: Sync from Parent Repository
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # 每6小时同步一次
+    - cron: '0 */6 * * *'
   workflow_dispatch:
+    inputs:
+      parent_branch:
+        description: '父仓库分支（默认自动检测）'
+        required: false
+        default: ''
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Get latest commit hash
-        id: latest_commit
+      - name: Get parent repository info
+        id: parent_info
         run: |
-          # 获取最新提交哈希（前7位）
-          LATEST_SHA=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            "https://api.github.com/repos/source-org/source-repo/commits/main" | \
-            jq -r '.sha[:7]')
-          echo "LATEST_SHA=$LATEST_SHA" >> $GITHUB_OUTPUT
-          echo "Latest commit: $LATEST_SHA"
+          # 使用 GitHub API 获取父仓库信息
+          PARENT_INFO=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}")
+          
+          PARENT_FULL_NAME=$(echo "$PARENT_INFO" | jq -r '.parent.full_name // empty')
+          
+          if [ -z "$PARENT_FULL_NAME" ]; then
+            echo "❌ 当前仓库不是 fork 仓库，无法获取父仓库信息"
+            exit 1
+          fi
+          
+          # 获取父仓库的默认分支
+          PARENT_DEFAULT_BRANCH=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/$PARENT_FULL_NAME" | \
+            jq -r '.default_branch // "main"')
+          
+          echo "PARENT_REPO=$PARENT_FULL_NAME" >> $GITHUB_OUTPUT
+          echo "PARENT_DEFAULT_BRANCH=$PARENT_DEFAULT_BRANCH" >> $GITHUB_OUTPUT
+          
+          echo "✅ 父仓库信息:"
+          echo "   名称: $PARENT_FULL_NAME"
+          echo "   默认分支: $PARENT_DEFAULT_BRANCH"
 
-      - name: Sync files
+      - name: Get latest commit from parent
+        id: parent_commit
+        env:
+          PARENT_REPO: ${{ steps.parent_info.outputs.PARENT_REPO }}
+          PARENT_BRANCH: ${{ github.event.inputs.parent_branch || steps.parent_info.outputs.PARENT_DEFAULT_BRANCH }}
+        run: |
+          # 获取父仓库最新提交
+          COMMIT_DATA=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/$PARENT_REPO/commits/$PARENT_BRANCH")
+          
+          COMMIT_SHA=$(echo "$COMMIT_DATA" | jq -r '.sha[:7]')
+          COMMIT_MSG=$(echo "$COMMIT_DATA" | jq -r '.commit.message | split("\n")[0]')
+          
+          echo "LATEST_COMMIT_SHA=$COMMIT_SHA" >> $GITHUB_OUTPUT
+          echo "LATEST_COMMIT_MSG=$COMMIT_MSG" >> $GITHUB_OUTPUT
+          
+          echo "📌 父仓库最新提交:"
+          echo "   分支: $PARENT_BRANCH"
+          echo "   提交: $COMMIT_SHA"
+          echo "   信息: $COMMIT_MSG"
+
+      - name: Sync files from parent
+        id: sync
         uses: champ-oss/file-sync@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          repo: TastSong/CrazyCar
+          repo: ${{ steps.parent_info.outputs.PARENT_REPO }}
+          branch: ${{ github.event.inputs.parent_branch || steps.parent_info.outputs.PARENT_DEFAULT_BRANCH }}
           files: |
-            # 你的文件列表
-          commit-message: "chore: sync from upstream (${{ steps.latest_commit.outputs.LATEST_SHA }})"
-          pull-request-title: "Sync: ${{ steps.latest_commit.outputs.LATEST_SHA }}"
+            # 添加需要同步的文件
+            # README.md
+            # .github/workflows/ci.yml
+            # src/main.js
+          commit-message: "chore: sync from parent (${{ steps.parent_commit.outputs.LATEST_COMMIT_SHA }})"
+          pull-request-title: "Sync from parent: ${{ steps.parent_commit.outputs.LATEST_COMMIT_SHA }}"
+          pull-request-branch: "sync-parent-$(date +%s)"
+
+      - name: Display workflow summary
+        run: |
+          echo "## 🔄 从父仓库同步完成" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**父仓库:** ${{ steps.parent_info.outputs.PARENT_REPO }}" >> $GITHUB_STEP_SUMMARY
+          echo "**分支:** ${{ github.event.inputs.parent_branch || steps.parent_info.outputs.PARENT_DEFAULT_BRANCH }}" >> $GITHUB_STEP_SUMMARY
+          echo "**最新提交:** \`${{ steps.parent_commit.outputs.LATEST_COMMIT_SHA }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**提交信息:** ${{ steps.parent_commit.outputs.LATEST_COMMIT_MSG }}" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "${{ steps.sync.outputs.changed }}" = "true" ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "✅ 文件已更新，已创建 Pull Request" >> $GITHUB_STEP_SUMMARY
+          fi
