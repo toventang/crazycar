@@ -47,14 +47,14 @@ jobs:
             console.log(`Branch: ${parentRepo.data.default_branch}`);
             console.log(`Latest: ${latestCommit.data.sha.substring(0, 7)}`);
 
-      - name: Sync files
-        uses: champ-oss/file-sync@main
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          repo: ${{ steps.repo_info.outputs.parent_repo }}
-          files: |
+      #- name: Sync files
+      #  uses: champ-oss/file-sync@main
+      #  with:
+      #    token: ${{ secrets.GITHUB_TOKEN }}
+          #repo: ${{ steps.repo_info.outputs.parent_repo }}
+          #files: |
             # 需要同步的文件列表
-          commit-message: "chore: sync from parent (${{ steps.repo_info.outputs.latest_commit_sha }})"
+          #commit-message: "chore: sync from parent (${{ steps.repo_info.outputs.latest_commit_sha }})"
 
       - name: Create summary
         if: always()
