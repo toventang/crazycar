@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash:*)",
+      "Bash(python:*)",
+      "Bash(node:*)",
+      "Bash(where:*)",
+      "Bash(GRAPH_DIR=\"F:/Github/CrazyCar\" npx vite:*)",
+      "Bash(test:*)",
+      "Bash(printf:*)",
+      "Bash(python3:*)",
+      "Bash(pnpm --filter @understand-anything/core build:*)"
+    ]
+  }
+}
