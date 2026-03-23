@@ -1,0 +1,3874 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "CrazyCar",
+    "languages": [
+      "bash",
+      "csharp",
+      "java",
+      "javascript",
+      "vue"
+    ],
+    "frameworks": [
+      "Element UI",
+      "Spring Boot",
+      "Vue.js"
+    ],
+    "description": "CrazyCar is a networked multiplayer racing game solution with Unity client, Spring Boot server, and Vue admin dashboard. Note: this project has over 200 source files; analysis may take some time.",
+    "analyzedAt": "2026-03-23T03:14:57.084590Z",
+    "gitCommitHash": "99827ae2349fc2b2ec33fd316dd0eea5a380ea43"
+  },
+  "nodes": [
+    {
+      "id": "file:CrazyCarBackground/src/App.vue",
+      "type": "file",
+      "name": "App.vue",
+      "filePath": "CrazyCarBackground/src/App.vue",
+      "summary": "Source file in CrazyCarBackground module.",
+      "tags": [
+        "source"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:CrazyCarBackground/src/main.js",
+      "type": "file",
+      "name": "main.js",
+      "filePath": "CrazyCarBackground/src/main.js",
+      "summary": "Vue admin dashboard entry point.",
+      "tags": [
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/CrazyCar.cs",
+      "type": "file",
+      "name": "CrazyCar.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/CrazyCar.cs",
+      "summary": "QFramework architecture entry point that registers all systems and models for the Unity client.",
+      "tags": [
+        "source"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Defines 1 class(es): CrazyCar"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/CrazyCar.cs:CrazyCar",
+      "type": "class",
+      "name": "CrazyCar",
+      "filePath": "CrazyCarClient/Assets/Scripts/CrazyCar.cs",
+      "summary": "Class CrazyCar defined in CrazyCar.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/Game/NetworkController.cs",
+      "type": "file",
+      "name": "NetworkController.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/Game/NetworkController.cs",
+      "summary": "Network communication handler for multiplayer connectivity.",
+      "tags": [
+        "controller",
+        "network"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 1 class(es): NetworkController"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Game/NetworkController.cs:NetworkController",
+      "type": "class",
+      "name": "NetworkController",
+      "filePath": "CrazyCarClient/Assets/Scripts/Game/NetworkController.cs",
+      "summary": "Class NetworkController defined in NetworkController.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "type": "file",
+      "name": "AvatarModel.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "summary": "Data model defining AvatarInfo, AvatarModel for state management.",
+      "tags": [
+        "data-model"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 2 class(es): AvatarInfo, AvatarModel"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs:AvatarInfo",
+      "type": "class",
+      "name": "AvatarInfo",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "summary": "Class AvatarInfo defined in AvatarModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs:AvatarModel",
+      "type": "class",
+      "name": "AvatarModel",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "summary": "Class AvatarModel defined in AvatarModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "type": "file",
+      "name": "EquipModel.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "summary": "Data model defining EquipInfo, EquipModel for state management.",
+      "tags": [
+        "data-model"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 2 class(es): EquipInfo, EquipModel"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs:EquipInfo",
+      "type": "class",
+      "name": "EquipInfo",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "summary": "Class EquipInfo defined in EquipModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs:EquipModel",
+      "type": "class",
+      "name": "EquipModel",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "summary": "Class EquipModel defined in EquipModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "type": "file",
+      "name": "GameModel.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "summary": "Data model defining GameModel for state management.",
+      "tags": [
+        "data-model"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 1 class(es): GameModel"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/GameModel.cs:GameModel",
+      "type": "class",
+      "name": "GameModel",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "summary": "Class GameModel defined in GameModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "type": "file",
+      "name": "InputModel.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "summary": "Data model defining InputModel for state management.",
+      "tags": [
+        "data-model"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Defines 1 class(es): InputModel"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/InputModel.cs:InputModel",
+      "type": "class",
+      "name": "InputModel",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "summary": "Class InputModel defined in InputModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "type": "file",
+      "name": "MapControllerModel.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "summary": "Data model defining MapControllerModel for state management.",
+      "tags": [
+        "data-model",
+        "controller"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Defines 1 class(es): MapControllerModel"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs:MapControllerModel",
+      "type": "class",
+      "name": "MapControllerModel",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "summary": "Class MapControllerModel defined in MapControllerModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "type": "file",
+      "name": "MatchModel.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "summary": "Data model defining MatchInfo, MatchRankInfo for state management.",
+      "tags": [
+        "data-model"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 4 class(es): MatchInfo, MatchRankInfo, MatchRoomMemberInfo"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs:MatchInfo",
+      "type": "class",
+      "name": "MatchInfo",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "summary": "Class MatchInfo defined in MatchModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs:MatchRankInfo",
+      "type": "class",
+      "name": "MatchRankInfo",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "summary": "Class MatchRankInfo defined in MatchModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs:MatchRoomMemberInfo",
+      "type": "class",
+      "name": "MatchRoomMemberInfo",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "summary": "Class MatchRoomMemberInfo defined in MatchModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs:MatchModel",
+      "type": "class",
+      "name": "MatchModel",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "summary": "Class MatchModel defined in MatchModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "type": "file",
+      "name": "RoomMsgModel.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "summary": "Data model defining RoomMsgModel for state management.",
+      "tags": [
+        "data-model"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Defines 1 class(es): RoomMsgModel"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs:RoomMsgModel",
+      "type": "class",
+      "name": "RoomMsgModel",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "summary": "Class RoomMsgModel defined in RoomMsgModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "type": "file",
+      "name": "SettingsModel.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "summary": "Data model defining SystemSettingsInfo, SettingsModel for state management.",
+      "tags": [
+        "data-model",
+        "system"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 2 class(es): SystemSettingsInfo, SettingsModel"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs:SystemSettingsInfo",
+      "type": "class",
+      "name": "SystemSettingsInfo",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "summary": "Class SystemSettingsInfo defined in SettingsModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs:SettingsModel",
+      "type": "class",
+      "name": "SettingsModel",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "summary": "Class SettingsModel defined in SettingsModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "type": "file",
+      "name": "TimeTrialModel.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "summary": "Data model defining TimeTrialInfo, TimeTrialRankInfo for state management.",
+      "tags": [
+        "data-model"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 3 class(es): TimeTrialInfo, TimeTrialRankInfo, TimeTrialModel"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs:TimeTrialInfo",
+      "type": "class",
+      "name": "TimeTrialInfo",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "summary": "Class TimeTrialInfo defined in TimeTrialModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs:TimeTrialRankInfo",
+      "type": "class",
+      "name": "TimeTrialRankInfo",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "summary": "Class TimeTrialRankInfo defined in TimeTrialModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs:TimeTrialModel",
+      "type": "class",
+      "name": "TimeTrialModel",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "summary": "Class TimeTrialModel defined in TimeTrialModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "type": "file",
+      "name": "UserModel.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "summary": "Data model defining UserInfo, UserModel for state management.",
+      "tags": [
+        "data-model"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 2 class(es): UserInfo, UserModel"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/UserModel.cs:UserInfo",
+      "type": "class",
+      "name": "UserInfo",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "summary": "Class UserInfo defined in UserModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/Model/UserModel.cs:UserModel",
+      "type": "class",
+      "name": "UserModel",
+      "filePath": "CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "summary": "Class UserModel defined in UserModel.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+      "type": "file",
+      "name": "AddressableSystem.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+      "summary": "System implementing AddressableInfo, AddressableSystem functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 2 class(es): AddressableInfo, AddressableSystem"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs:AddressableInfo",
+      "type": "class",
+      "name": "AddressableInfo",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+      "summary": "Class AddressableInfo defined in AddressableSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs:AddressableSystem",
+      "type": "class",
+      "name": "AddressableSystem",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+      "summary": "Class AddressableSystem defined in AddressableSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs",
+      "type": "file",
+      "name": "CheckpointSystem.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs",
+      "summary": "System implementing CheckpointSystem functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 1 class(es): CheckpointSystem"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs:CheckpointSystem",
+      "type": "class",
+      "name": "CheckpointSystem",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs",
+      "summary": "Class CheckpointSystem defined in CheckpointSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs",
+      "type": "file",
+      "name": "DataParseSystem.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs",
+      "summary": "System implementing DataParseSystem functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Defines 1 class(es): DataParseSystem"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs:DataParseSystem",
+      "type": "class",
+      "name": "DataParseSystem",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs",
+      "summary": "Class DataParseSystem defined in DataParseSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs",
+      "type": "file",
+      "name": "GuidanceSystem.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs",
+      "summary": "System implementing GuidanceSystem functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Defines 1 class(es): GuidanceSystem"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs:GuidanceSystem",
+      "type": "class",
+      "name": "GuidanceSystem",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs",
+      "summary": "Class GuidanceSystem defined in GuidanceSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/I18NSystem.cs",
+      "type": "file",
+      "name": "I18NSystem.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/I18NSystem.cs",
+      "summary": "System implementing I18NSystem functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 1 class(es): I18NSystem"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/I18NSystem.cs:I18NSystem",
+      "type": "class",
+      "name": "I18NSystem",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/I18NSystem.cs",
+      "summary": "Class I18NSystem defined in I18NSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs",
+      "type": "file",
+      "name": "IndexCarSystem.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs",
+      "summary": "System implementing IndexCarSystem functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Defines 1 class(es): IndexCarSystem"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs:IndexCarSystem",
+      "type": "class",
+      "name": "IndexCarSystem",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs",
+      "summary": "Class IndexCarSystem defined in IndexCarSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+      "type": "file",
+      "name": "KCPSystem.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+      "summary": "System implementing KCPSystem, KCPManager functionality.",
+      "tags": [
+        "system",
+        "network"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 2 class(es): KCPSystem, KCPManager"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs:KCPSystem",
+      "type": "class",
+      "name": "KCPSystem",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+      "summary": "Class KCPSystem defined in KCPSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs:KCPManager",
+      "type": "class",
+      "name": "KCPManager",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+      "summary": "Class KCPManager defined in KCPSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs",
+      "type": "file",
+      "name": "MatchRoomSystem.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs",
+      "summary": "System implementing MatchRoomSystem functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Defines 1 class(es): MatchRoomSystem"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs:MatchRoomSystem",
+      "type": "class",
+      "name": "MatchRoomSystem",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs",
+      "summary": "Class MatchRoomSystem defined in MatchRoomSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs",
+      "type": "file",
+      "name": "NetworkSystem.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs",
+      "summary": "System implementing NetworkSystem functionality.",
+      "tags": [
+        "system",
+        "network"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Defines 1 class(es): NetworkSystem"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs:NetworkSystem",
+      "type": "class",
+      "name": "NetworkSystem",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs",
+      "summary": "Class NetworkSystem defined in NetworkSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "type": "file",
+      "name": "PlayerManagerSystem.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "summary": "System implementing PlayerCreateMsg, PlayerStateMsg functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 5 class(es): PlayerCreateMsg, PlayerStateMsg, PlayerOperatMsg"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs:PlayerCreateMsg",
+      "type": "class",
+      "name": "PlayerCreateMsg",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "summary": "Class PlayerCreateMsg defined in PlayerManagerSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs:PlayerStateMsg",
+      "type": "class",
+      "name": "PlayerStateMsg",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "summary": "Class PlayerStateMsg defined in PlayerManagerSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs:PlayerOperatMsg",
+      "type": "class",
+      "name": "PlayerOperatMsg",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "summary": "Class PlayerOperatMsg defined in PlayerManagerSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs:PlayerCompleteMsg",
+      "type": "class",
+      "name": "PlayerCompleteMsg",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "summary": "Class PlayerCompleteMsg defined in PlayerManagerSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs:PlayerManagerSystem",
+      "type": "class",
+      "name": "PlayerManagerSystem",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "summary": "Class PlayerManagerSystem defined in PlayerManagerSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs",
+      "type": "file",
+      "name": "ScreenEffectsSystem.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs",
+      "summary": "System implementing ScreenEffectsSystem functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Defines 1 class(es): ScreenEffectsSystem"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs:ScreenEffectsSystem",
+      "type": "class",
+      "name": "ScreenEffectsSystem",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs",
+      "summary": "Class ScreenEffectsSystem defined in ScreenEffectsSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs",
+      "type": "file",
+      "name": "CharacterSkillManager.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs",
+      "summary": "System implementing SkillDataArray, CharacterSkillManager functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 2 class(es): SkillDataArray, CharacterSkillManager"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs:SkillDataArray",
+      "type": "class",
+      "name": "SkillDataArray",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs",
+      "summary": "Class SkillDataArray defined in CharacterSkillManager.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs:CharacterSkillManager",
+      "type": "class",
+      "name": "CharacterSkillManager",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs",
+      "summary": "Class CharacterSkillManager defined in CharacterSkillManager.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs",
+      "type": "file",
+      "name": "CharacterSkillSystem.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs",
+      "summary": "System implementing CharacterSkillSystem functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 1 class(es): CharacterSkillSystem"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs:CharacterSkillSystem",
+      "type": "class",
+      "name": "CharacterSkillSystem",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs",
+      "summary": "Class CharacterSkillSystem defined in CharacterSkillSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs",
+      "type": "file",
+      "name": "SkillData.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs",
+      "summary": "System implementing SkillData functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 1 class(es): SkillData"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs:SkillData",
+      "type": "class",
+      "name": "SkillData",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs",
+      "summary": "Class SkillData defined in SkillData.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs",
+      "type": "file",
+      "name": "DeployerConfigFactory.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs",
+      "summary": "System implementing DeployerConfigFactory functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Defines 1 class(es): DeployerConfigFactory"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs:DeployerConfigFactory",
+      "type": "class",
+      "name": "DeployerConfigFactory",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs",
+      "summary": "Class DeployerConfigFactory defined in DeployerConfigFactory.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs",
+      "type": "file",
+      "name": "MeleeSkillDeployer.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs",
+      "summary": "System implementing MeleeSkillDeployer functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Defines 1 class(es): MeleeSkillDeployer"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs:MeleeSkillDeployer",
+      "type": "class",
+      "name": "MeleeSkillDeployer",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs",
+      "summary": "Class MeleeSkillDeployer defined in MeleeSkillDeployer.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs",
+      "type": "file",
+      "name": "MoveSkillDeployer.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs",
+      "summary": "System implementing MoveSkillDeployer functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Defines 1 class(es): MoveSkillDeployer"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs:MoveSkillDeployer",
+      "type": "class",
+      "name": "MoveSkillDeployer",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs",
+      "summary": "Class MoveSkillDeployer defined in MoveSkillDeployer.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs",
+      "type": "file",
+      "name": "PointSkillDeployer.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs",
+      "summary": "System implementing PointSkillDeployer functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Defines 1 class(es): PointSkillDeployer"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs:PointSkillDeployer",
+      "type": "class",
+      "name": "PointSkillDeployer",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs",
+      "summary": "Class PointSkillDeployer defined in PointSkillDeployer.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs",
+      "type": "file",
+      "name": "RemoteSkillDeployer.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs",
+      "summary": "System implementing RemoteSkillDeployer functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Defines 1 class(es): RemoteSkillDeployer"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs:RemoteSkillDeployer",
+      "type": "class",
+      "name": "RemoteSkillDeployer",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs",
+      "summary": "Class RemoteSkillDeployer defined in RemoteSkillDeployer.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs",
+      "type": "file",
+      "name": "SkillDeployer.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs",
+      "summary": "System implementing SkillDeployer functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 1 class(es): SkillDeployer"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs:SkillDeployer",
+      "type": "class",
+      "name": "SkillDeployer",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs",
+      "summary": "Class SkillDeployer defined in SkillDeployer.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs",
+      "type": "file",
+      "name": "BlowFlyImpact.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs",
+      "summary": "System implementing BlowFlyImpact functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Defines 1 class(es): BlowFlyImpact"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs:BlowFlyImpact",
+      "type": "class",
+      "name": "BlowFlyImpact",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs",
+      "summary": "Class BlowFlyImpact defined in BlowFlyImpact.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs",
+      "type": "file",
+      "name": "CostMpImpact.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs",
+      "summary": "System implementing CostMpImpact functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Defines 1 class(es): CostMpImpact"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs:CostMpImpact",
+      "type": "class",
+      "name": "CostMpImpact",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs",
+      "summary": "Class CostMpImpact defined in CostMpImpact.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs",
+      "type": "file",
+      "name": "DamageImpact.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs",
+      "summary": "System implementing DamageImpact functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 1 class(es): DamageImpact"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs:DamageImpact",
+      "type": "class",
+      "name": "DamageImpact",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs",
+      "summary": "Class DamageImpact defined in DamageImpact.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/IImpactEffect.cs",
+      "type": "file",
+      "name": "IImpactEffect.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/IImpactEffect.cs",
+      "summary": "System component for game logic.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs",
+      "type": "file",
+      "name": "MoveImpact.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs",
+      "summary": "System implementing MoveImpact functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Defines 1 class(es): MoveImpact"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs:MoveImpact",
+      "type": "class",
+      "name": "MoveImpact",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs",
+      "summary": "Class MoveImpact defined in MoveImpact.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/IAttackSelector.cs",
+      "type": "file",
+      "name": "IAttackSelector.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/IAttackSelector.cs",
+      "summary": "System component for game logic.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs",
+      "type": "file",
+      "name": "SectorAttackSelector.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs",
+      "summary": "System implementing SectorAttackSelector functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 1 class(es): SectorAttackSelector"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs:SectorAttackSelector",
+      "type": "class",
+      "name": "SectorAttackSelector",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs",
+      "summary": "Class SectorAttackSelector defined in SectorAttackSelector.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/SoundSystem.cs",
+      "type": "file",
+      "name": "SoundSystem.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SoundSystem.cs",
+      "summary": "System implementing SoundSystem functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 1 class(es): SoundSystem"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/SoundSystem.cs:SoundSystem",
+      "type": "class",
+      "name": "SoundSystem",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/SoundSystem.cs",
+      "summary": "Class SoundSystem defined in SoundSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs",
+      "type": "file",
+      "name": "VibrationSystem.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs",
+      "summary": "System implementing VibrationSystem functionality.",
+      "tags": [
+        "system"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Defines 1 class(es): VibrationSystem"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs:VibrationSystem",
+      "type": "class",
+      "name": "VibrationSystem",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs",
+      "summary": "Class VibrationSystem defined in VibrationSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs",
+      "type": "file",
+      "name": "WebSocketSystem.cs",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs",
+      "summary": "System implementing WebSocketSystem functionality.",
+      "tags": [
+        "system",
+        "network"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Defines 1 class(es): WebSocketSystem"
+    },
+    {
+      "id": "class:CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs:WebSocketSystem",
+      "type": "class",
+      "name": "WebSocketSystem",
+      "filePath": "CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs",
+      "summary": "Class WebSocketSystem defined in WebSocketSystem.cs",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CrazyCarServer/src/main/java/com/tastsong/crazycar/CrazyCarApplication.java",
+      "type": "file",
+      "name": "CrazyCarApplication.java",
+      "filePath": "CrazyCarServer/src/main/java/com/tastsong/crazycar/CrazyCarApplication.java",
+      "summary": "Spring Boot main application class for the game server.",
+      "tags": [
+        "source"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Defines 1 class(es): CrazyCarApplication"
+    },
+    {
+      "id": "class:CrazyCarServer/src/main/java/com/tastsong/crazycar/CrazyCarApplication.java:CrazyCarApplication",
+      "type": "class",
+      "name": "CrazyCarApplication",
+      "filePath": "CrazyCarServer/src/main/java/com/tastsong/crazycar/CrazyCarApplication.java",
+      "summary": "Class CrazyCarApplication defined in CrazyCarApplication.java",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/CrazyCar.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/CrazyCar.cs:CrazyCar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Game/NetworkController.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Game/NetworkController.cs:NetworkController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs:AvatarInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs:AvatarModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs:EquipInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs:EquipModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/GameModel.cs:GameModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/InputModel.cs:InputModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs:MapControllerModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs:MatchInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs:MatchRankInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs:MatchRoomMemberInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs:MatchModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs:RoomMsgModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs:SystemSettingsInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs:SettingsModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs:TimeTrialInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs:TimeTrialRankInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs:TimeTrialModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/UserModel.cs:UserInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/Model/UserModel.cs:UserModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs:AddressableInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs:AddressableSystem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs:CheckpointSystem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs:DataParseSystem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs:GuidanceSystem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/I18NSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/I18NSystem.cs:I18NSystem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs:IndexCarSystem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs:KCPSystem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs:KCPManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs:MatchRoomSystem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs:NetworkSystem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs:PlayerCreateMsg",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs:PlayerStateMsg",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs:PlayerOperatMsg",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs:PlayerCompleteMsg",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs:PlayerManagerSystem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs:ScreenEffectsSystem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs:SkillDataArray",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs:CharacterSkillManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs:CharacterSkillSystem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs:SkillData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs:DeployerConfigFactory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs:MeleeSkillDeployer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs:MoveSkillDeployer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs:PointSkillDeployer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs:RemoteSkillDeployer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs:SkillDeployer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs:BlowFlyImpact",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs:CostMpImpact",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs:DamageImpact",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs:MoveImpact",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs:SectorAttackSelector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/SoundSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/SoundSystem.cs:SoundSystem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs:VibrationSystem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs",
+      "target": "class:CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs:WebSocketSystem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarServer/src/main/java/com/tastsong/crazycar/CrazyCarApplication.java",
+      "target": "class:CrazyCarServer/src/main/java/com/tastsong/crazycar/CrazyCarApplication.java:CrazyCarApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/I18NSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/IImpactEffect.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/IAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SoundSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/I18NSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/IImpactEffect.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/IAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SoundSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/I18NSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/IImpactEffect.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/IAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SoundSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/I18NSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/IImpactEffect.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/IAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SoundSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/I18NSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/IImpactEffect.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/IAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SoundSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/I18NSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/IImpactEffect.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/IAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SoundSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/I18NSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/IImpactEffect.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/IAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SoundSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/I18NSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/IImpactEffect.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/IAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SoundSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/I18NSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/IImpactEffect.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/IAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SoundSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/I18NSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/IImpactEffect.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/IAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/SoundSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+      "target": "file:CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:unity-client",
+      "name": "Unity Client",
+      "description": "C# game client using QFramework architecture with Model-System-Utility layers",
+      "nodeIds": [
+        "file:CrazyCarClient/Assets/Scripts/CrazyCar.cs",
+        "class:CrazyCarClient/Assets/Scripts/CrazyCar.cs:CrazyCar",
+        "file:CrazyCarClient/Assets/Scripts/Game/NetworkController.cs",
+        "class:CrazyCarClient/Assets/Scripts/Game/NetworkController.cs:NetworkController",
+        "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+        "class:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs:AvatarInfo",
+        "class:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs:AvatarModel",
+        "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+        "class:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs:EquipInfo",
+        "class:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs:EquipModel",
+        "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+        "class:CrazyCarClient/Assets/Scripts/Model/GameModel.cs:GameModel",
+        "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+        "class:CrazyCarClient/Assets/Scripts/Model/InputModel.cs:InputModel",
+        "file:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs",
+        "class:CrazyCarClient/Assets/Scripts/Model/MapControllerModel.cs:MapControllerModel",
+        "file:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs",
+        "class:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs:MatchInfo",
+        "class:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs:MatchRankInfo",
+        "class:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs:MatchRoomMemberInfo",
+        "class:CrazyCarClient/Assets/Scripts/Model/MatchModel.cs:MatchModel",
+        "file:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs",
+        "class:CrazyCarClient/Assets/Scripts/Model/RoomMsgModel.cs:RoomMsgModel",
+        "file:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs",
+        "class:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs:SystemSettingsInfo",
+        "class:CrazyCarClient/Assets/Scripts/Model/SettingsModel.cs:SettingsModel",
+        "file:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs",
+        "class:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs:TimeTrialInfo",
+        "class:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs:TimeTrialRankInfo",
+        "class:CrazyCarClient/Assets/Scripts/Model/TimeTrialModel.cs:TimeTrialModel",
+        "file:CrazyCarClient/Assets/Scripts/Model/UserModel.cs",
+        "class:CrazyCarClient/Assets/Scripts/Model/UserModel.cs:UserInfo",
+        "class:CrazyCarClient/Assets/Scripts/Model/UserModel.cs:UserModel",
+        "file:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs:AddressableInfo",
+        "class:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs:AddressableSystem",
+        "file:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs:CheckpointSystem",
+        "file:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs:DataParseSystem",
+        "file:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs:GuidanceSystem",
+        "file:CrazyCarClient/Assets/Scripts/System/I18NSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/I18NSystem.cs:I18NSystem",
+        "file:CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/IndexCarSystem.cs:IndexCarSystem",
+        "file:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs:KCPSystem",
+        "class:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs:KCPManager",
+        "file:CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/MatchRoomSystem.cs:MatchRoomSystem",
+        "file:CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs:NetworkSystem",
+        "file:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs:PlayerCreateMsg",
+        "class:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs:PlayerStateMsg",
+        "class:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs:PlayerOperatMsg",
+        "class:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs:PlayerCompleteMsg",
+        "class:CrazyCarClient/Assets/Scripts/System/PlayerManagerSystem.cs:PlayerManagerSystem",
+        "file:CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/ScreenEffectsSystem.cs:ScreenEffectsSystem",
+        "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs:SkillDataArray",
+        "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillManager.cs:CharacterSkillManager",
+        "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/CharacterSkillSystem.cs:CharacterSkillSystem",
+        "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Commen/SkillData.cs:SkillData",
+        "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/DeployerConfigFactory.cs:DeployerConfigFactory",
+        "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MeleeSkillDeployer.cs:MeleeSkillDeployer",
+        "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/MoveSkillDeployer.cs:MoveSkillDeployer",
+        "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/PointSkillDeployer.cs:PointSkillDeployer",
+        "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/RemoteSkillDeployer.cs:RemoteSkillDeployer",
+        "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Deployer/SkillDeployer.cs:SkillDeployer",
+        "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/BlowFlyImpact.cs:BlowFlyImpact",
+        "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/CostMpImpact.cs:CostMpImpact",
+        "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/DamageImpact.cs:DamageImpact",
+        "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/IImpactEffect.cs",
+        "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/ImpactEffects/MoveImpact.cs:MoveImpact",
+        "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/IAttackSelector.cs",
+        "file:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/SkillSystem/Selector/SectorAttackSelector.cs:SectorAttackSelector",
+        "file:CrazyCarClient/Assets/Scripts/System/SoundSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/SoundSystem.cs:SoundSystem",
+        "file:CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/VibrationSystem.cs:VibrationSystem",
+        "file:CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs:WebSocketSystem"
+      ]
+    },
+    {
+      "id": "layer:spring-server",
+      "name": "Spring Boot Server",
+      "description": "Java game server with REST APIs and WebSocket handlers",
+      "nodeIds": [
+        "file:CrazyCarServer/src/main/java/com/tastsong/crazycar/CrazyCarApplication.java",
+        "class:CrazyCarServer/src/main/java/com/tastsong/crazycar/CrazyCarApplication.java:CrazyCarApplication"
+      ]
+    },
+    {
+      "id": "layer:vue-admin",
+      "name": "Vue Admin Dashboard",
+      "description": "Vue.js admin panel for game management",
+      "nodeIds": [
+        "file:CrazyCarBackground/src/App.vue",
+        "file:CrazyCarBackground/src/main.js"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Project Entry Points",
+      "description": "CrazyCar has three main entry points: the Unity client (CrazyCar.cs), Spring Boot server (CrazyCarApplication.java), and Vue admin dashboard (main.js).",
+      "nodeIds": [
+        "file:CrazyCarClient/Assets/Scripts/CrazyCar.cs",
+        "file:CrazyCarBackground/src/main.js"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "QFramework Architecture - Model Layer",
+      "description": "The client uses QFramework with a strict Model-System-Utility architecture. Models manage game state like player data, match info, and equipment.",
+      "nodeIds": [
+        "file:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs",
+        "class:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs:AvatarInfo",
+        "class:CrazyCarClient/Assets/Scripts/Model/AvatarModel.cs:AvatarModel",
+        "file:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs",
+        "class:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs:EquipInfo",
+        "class:CrazyCarClient/Assets/Scripts/Model/EquipModel.cs:EquipModel",
+        "file:CrazyCarClient/Assets/Scripts/Model/GameModel.cs",
+        "class:CrazyCarClient/Assets/Scripts/Model/GameModel.cs:GameModel",
+        "file:CrazyCarClient/Assets/Scripts/Model/InputModel.cs",
+        "class:CrazyCarClient/Assets/Scripts/Model/InputModel.cs:InputModel"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "QFramework Architecture - System Layer",
+      "description": "Systems contain game logic for networking, player management, time trials, and matchmaking.",
+      "nodeIds": [
+        "file:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs:AddressableInfo",
+        "class:CrazyCarClient/Assets/Scripts/System/AddressableSystem.cs:AddressableSystem",
+        "file:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/CheckpointSystem.cs:CheckpointSystem",
+        "file:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/DataParseSystem.cs:DataParseSystem",
+        "file:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs",
+        "class:CrazyCarClient/Assets/Scripts/System/GuidanceSystem.cs:GuidanceSystem",
+        "file:CrazyCarClient/Assets/Scripts/System/I18NSystem.cs"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Network Communication",
+      "description": "Dual-protocol networking using both KCP (low-latency UDP) and WebSocket for real-time multiplayer synchronization.",
+      "nodeIds": [
+        "file:CrazyCarClient/Assets/Scripts/Game/NetworkController.cs",
+        "file:CrazyCarClient/Assets/Scripts/System/KCPSystem.cs",
+        "file:CrazyCarClient/Assets/Scripts/System/NetworkSystem.cs",
+        "file:CrazyCarClient/Assets/Scripts/System/WebSocketSystem.cs"
+      ]
+    }
+  ]
+}
