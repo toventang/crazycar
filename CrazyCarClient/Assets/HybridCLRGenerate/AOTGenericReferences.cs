@@ -6,6 +6,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	public static readonly IReadOnlyList<string> PatchedAOTAssemblyList = new List<string>
 	{
 		"Main.dll",
+		"Plugins.dll",
 		"mscorlib.dll",
 	};
 	// }}
@@ -22,6 +23,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// QFramework.BindableProperty<object>
 	// QFramework.BindablePropertyUnRegister<int>
 	// QFramework.BindablePropertyUnRegister<object>
+	// QFramework.PersistentMonoSingleton<object>
 	// System.Action<int>
 	// System.Action<object>
 	// System.Collections.Generic.ArraySortHelper<object>
@@ -41,12 +43,8 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 
 	public void RefMethods()
 	{
-		// object QFramework.CanGetModelExtension.GetModel<object>(QFramework.ICanGetModel)
-		// object QFramework.CanGetSystemExtension.GetSystem<object>(QFramework.ICanGetSystem)
 		// System.Void QFramework.CanSendCommandExtension.SendCommand<object>(QFramework.ICanSendCommand)
 		// System.Void QFramework.CanSendCommandExtension.SendCommand<object>(QFramework.ICanSendCommand,object)
-		// object QFramework.IArchitecture.GetModel<object>()
-		// object QFramework.IArchitecture.GetSystem<object>()
 		// System.Void QFramework.IArchitecture.SendCommand<object>()
 		// System.Void QFramework.IArchitecture.SendCommand<object>(object)
 	}
