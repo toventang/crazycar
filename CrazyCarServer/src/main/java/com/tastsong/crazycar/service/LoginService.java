@@ -6,6 +6,7 @@ import cn.hutool.core.date.DateUtil;
 import com.tastsong.crazycar.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.tastsong.crazycar.dto.resp.RespUserDetail;
 import com.tastsong.crazycar.utils.Util;
@@ -44,6 +45,7 @@ public class LoginService {
     }
 
 
+    @Transactional(rollbackFor = Exception.class)
     public int registerUser (String userName, String password){
         int defaultAid = 1;
 		int defaultCid = 1;
