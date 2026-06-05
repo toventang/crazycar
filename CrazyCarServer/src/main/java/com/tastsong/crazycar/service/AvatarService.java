@@ -81,15 +81,10 @@ public class AvatarService {
 		return hasStar >= needStar;
 	}
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public boolean buyAvatar(int uid, int aid){
         int curStar = userService.getUserStar(uid) - getNeedStar(aid);
         userService.updateUserStar(uid, curStar);
-        try {
-            addAvatarForUser(uid, aid);
-        } catch (Exception e) {
-            log.error(e.getMessage());
-        }
         return addAvatarForUser(uid, aid);
     }
 
