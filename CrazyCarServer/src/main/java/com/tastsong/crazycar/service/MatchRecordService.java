@@ -60,10 +60,12 @@ public class MatchRecordService {
     // 获取排行榜
     public List<RespMatchRank> getMatchRankListByCid(int cid){
         QueryWrapper<MatchRecordModel> queryWrapper = new QueryWrapper<>();
+        queryWrapper.select("uid", "MIN(complete_time) AS complete_time");
         queryWrapper.lambda().eq(MatchRecordModel::getCid, cid);
         queryWrapper.lambda().ne(MatchRecordModel::getComplete_time, -1);
         queryWrapper.lambda().groupBy(MatchRecordModel::getUid);
         queryWrapper.lambda().orderByAsc(MatchRecordModel::getComplete_time);
+        queryWrapper.lambda().orderByAsc(MatchRecordModel::getUid);
         List<MatchRecordModel> matchRecordModels = matchRecordMapper.selectList(queryWrapper);
         List<RespMatchRank> rankModels = new ArrayList<>();
         for (int i = 0; i < matchRecordModels.size(); i++) {

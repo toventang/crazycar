@@ -13,6 +13,7 @@ import com.tastsong.crazycar.model.TimeTrialClassRecordModel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -85,14 +86,10 @@ public class TimeTrialClassService {
 		return hasStar >= needStar;
 	}
 
+    @Transactional(rollbackFor = Exception.class)
     public boolean buyClass(int uid, int aid){
         int curStar = userService.getUserStar(uid) - getNeedStar(aid);
         userService.updateUserStar(uid, curStar);
-        try {
-            addTimeTrialClassForUser(uid, aid);
-        } catch (Exception e) {
-            log.error(e.getMessage());
-        }
         return addTimeTrialClassForUser(uid, aid);
     }
 

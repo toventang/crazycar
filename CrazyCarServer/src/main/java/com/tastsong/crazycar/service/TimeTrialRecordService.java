@@ -30,10 +30,12 @@ public class TimeTrialRecordService {
     // 获取排行榜
     public List<RespTimeTrialRank> getTimeTrialRankListByCid(int cid){
         QueryWrapper<TimeTrialRecordModel> queryWrapper = new QueryWrapper<>();
+        queryWrapper.select("uid", "MIN(complete_time) AS complete_time");
         queryWrapper.lambda().eq(TimeTrialRecordModel::getCid, cid);
         queryWrapper.lambda().ne(TimeTrialRecordModel::getComplete_time, -1);
         queryWrapper.lambda().groupBy(TimeTrialRecordModel::getUid);
         queryWrapper.lambda().orderByAsc(TimeTrialRecordModel::getComplete_time);
+        queryWrapper.lambda().orderByAsc(TimeTrialRecordModel::getUid);
         List<TimeTrialRecordModel> timeTrialRecordModels = timeTrialRecordMapper.selectList(queryWrapper);
         List<RespTimeTrialRank> respTimeTrialRanks = new ArrayList<>();
         for (int i = 0; i< timeTrialRecordModels.size(); i++){
