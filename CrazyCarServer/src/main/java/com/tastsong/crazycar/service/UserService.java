@@ -96,6 +96,14 @@ public class UserService {
         return userMapper.incrUserStar(uid, delta) > 0;
     }
 
+    /**
+     * 原子扣减星币 + 防超扣。失败原因可能是余额不足或 uid 不存在。
+     * 调用方应根据返回值决定后续动作(如终止购买流程)。
+     */
+    public boolean deductUserStar(int uid, int needStar){
+        return userMapper.deductUserStar(uid, needStar) > 0;
+    }
+
     public boolean updateUserVip(int uid, boolean isVip) {
         UserModel userModel = userMapper.selectById(uid);
         if  (ObjUtil.isEmpty(userModel)) {

@@ -14,4 +14,12 @@ public interface UserMapper extends BaseMapper<UserModel> {
      */
     @Update("UPDATE `user` SET star = star + #{delta} WHERE uid = #{uid}")
     int incrUserStar(@Param("uid") int uid, @Param("delta") int delta);
+
+    /**
+     * 原子扣减用户星币，并在 SQL 层用 star >= needStar 防止超扣。
+     * 高并发下两次购买不会同时成功，余额不足时受影响行数为 0。
+     * @return 受影响行数；1 表示扣减成功，0 表示余额不足或 uid 不存在
+     */
+    @Update("UPDATE `user` SET star = star - #{needStar} WHERE uid = #{uid} AND star >= #{needStar}")
+    int deductUserStar(@Param("uid") int uid, @Param("needStar") int needStar);
 }
