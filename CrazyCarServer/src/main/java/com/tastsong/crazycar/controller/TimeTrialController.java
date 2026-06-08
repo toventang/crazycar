@@ -81,14 +81,12 @@ public class TimeTrialController {
             resp.set_win(false);
             resp.setComplete_time(-1);
         }
-        boolean isBreakRecord = timeTrialRecordService.isBreakRecord(recordModel);
+
+        // 事务结算：判定破纪录 + 发奖励 + 写入记录原子化，避免部分失败导致星币与记录不一致
+        boolean isBreakRecord = timeTrialRecordService.settleResult(recordModel);
         resp.set_break_record(isBreakRecord);
         resp.setReward(isBreakRecord ? timeTrialClassService.getTimeTrialClass(recordModel.getCid()).getStar() : 0);
-        if (isBreakRecord) {
-            timeTrialClassService.giveReward(recordModel.getUid(), recordModel.getCid());
-        }
-        timeTrialRecordService.insertRecord(recordModel);
-        
+
         if (isBreakRecord) {
             resp.setRank(timeTrialRecordService.getRankByUid(recordModel.getUid(), recordModel.getCid()));
         } else {
