@@ -7,6 +7,7 @@ import com.tastsong.crazycar.mapper.UserMapper;
 import com.tastsong.crazycar.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -73,6 +74,7 @@ public class UserService {
         return !ObjUtil.isEmpty(userMapper.selectById(uid));
     }
 
+    @Transactional(rollbackFor = Exception.class)
     public void updateUser(UserModel userModel){
         updateUserStar(userModel.getUid(), userModel.getStar());
         updateUserVip(userModel.getUid(), userModel.is_vip());
