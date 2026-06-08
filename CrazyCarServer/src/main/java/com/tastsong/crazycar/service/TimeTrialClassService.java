@@ -124,6 +124,7 @@ public class TimeTrialClassService {
         if (ObjUtil.isEmpty(model)) {
             return false;
         }
-        return userService.updateUserStar(uid, model.getStar() + userService.getUserStar(uid));
+        // 原子累加，避免并发下两次发奖各读一次旧值再写回，造成一次奖励被覆盖丢失
+        return userService.incrUserStar(uid, model.getStar());
     }
 }

@@ -87,6 +87,15 @@ public class UserService {
         return userMapper.updateById(userModel) > 0;
     }
 
+    /**
+     * 原子累加用户星币(delta 可正可负)，避免并发下两次读改写互相覆盖。
+     * 推荐替代 "getUserStar + updateUserStar" 的写法。
+     * @return 是否成功(uid 不存在或受影响行数 0 时返回 false)
+     */
+    public boolean incrUserStar(int uid, int delta){
+        return userMapper.incrUserStar(uid, delta) > 0;
+    }
+
     public boolean updateUserVip(int uid, boolean isVip) {
         UserModel userModel = userMapper.selectById(uid);
         if  (ObjUtil.isEmpty(userModel)) {
