@@ -60,13 +60,11 @@ public class MatchController {
             resp.set_win(false);
             resp.setComplete_time(-1);
         }
-        boolean isBreakRecord = matchRecordService.isBreakRecord(recordModel);
+
+        // 事务结算：判定破纪录 + 发奖励 + 写入记录原子化，避免部分失败导致星币与记录不一致
+        boolean isBreakRecord = matchRecordService.settleResult(recordModel);
         resp.set_break_record(isBreakRecord);
         resp.setReward(isBreakRecord ? matchClassModel.getStar() : 0);
-        if (isBreakRecord) {
-            matchClassService.giveReward(recordModel.getUid(), recordModel.getCid());
-        }
-        matchRecordService.insertRecord(recordModel);
 
         resp.setRank(matchRecordService.getMatchRankListByCid(recordModel.getCid()));
         return resp;

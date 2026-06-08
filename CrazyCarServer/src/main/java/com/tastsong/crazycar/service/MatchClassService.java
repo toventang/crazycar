@@ -28,7 +28,8 @@ public class MatchClassService {
     }
 
     public void giveReward(int uid, int cid) {
-        userService.updateUserStar(uid, getMatchClassByCid(cid).getStar() + userService.getUserStar(uid));
+        // 原子累加，避免并发下两次发奖各读一次旧值再写回，造成一次奖励被覆盖丢失
+        userService.incrUserStar(uid, getMatchClassByCid(cid).getStar());
     }
 
     public MatchClassModel createOneMatch(int mapCid, String roomId) {

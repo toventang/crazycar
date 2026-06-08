@@ -9,7 +9,9 @@
       "Bash(test:*)",
       "Bash(printf:*)",
       "Bash(python3:*)",
-      "Bash(pnpm --filter @understand-anything/core build:*)"
+      "Bash(pnpm --filter @understand-anything/core build:*)",
+      "Bash(xargs wc -l)",
+      "Bash(xargs grep -l \"GameController\\\\|@ServerEndpoint\\\\|websocket\")"
     ]
   }
 }

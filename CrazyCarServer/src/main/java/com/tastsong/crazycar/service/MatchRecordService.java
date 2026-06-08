@@ -9,6 +9,7 @@ import com.tastsong.crazycar.dto.resp.RespMatchRank;
 import com.tastsong.crazycar.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.tastsong.crazycar.mapper.MatchRecordMapper;
 
@@ -18,6 +19,8 @@ public class MatchRecordService {
     private UserService userService;
     @Autowired
     private MatchRecordMapper matchRecordMapper;
+    @Autowired
+    private MatchClassService matchClassService;
 
     public boolean isBreakRecord(MatchRecordModel recordModel) {
         if (recordModel.getComplete_time() == -1) {
@@ -55,6 +58,22 @@ public class MatchRecordService {
 
     public void insertRecord(MatchRecordModel recordModel) {
         matchRecordMapper.insert(recordModel);
+    }
+
+    /**
+     * 结算一次匹配赛成绩：判定破纪录 -> 发奖励 -> 写入记录
+     * 三步在同一事务内执行，避免奖励已下发但记录未落库(或反之)造成的星币-账本不一致。
+     * @param recordModel 待写入的比赛记录(uid/cid/complete_time/record_time 必填)
+     * @return 是否破纪录，由上层用于构造响应(reward / rank)
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public boolean settleResult(MatchRecordModel recordModel) {
+        boolean isBreakRecord = isBreakRecord(recordModel);
+        if (isBreakRecord) {
+            matchClassService.giveReward(recordModel.getUid(), recordModel.getCid());
+        }
+        insertRecord(recordModel);
+        return isBreakRecord;
     }
 
     // 获取排行榜

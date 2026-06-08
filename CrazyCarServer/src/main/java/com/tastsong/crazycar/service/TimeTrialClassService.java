@@ -88,8 +88,11 @@ public class TimeTrialClassService {
 
     @Transactional(rollbackFor = Exception.class)
     public boolean buyClass(int uid, int aid){
-        int curStar = userService.getUserStar(uid) - getNeedStar(aid);
-        userService.updateUserStar(uid, curStar);
+        // 原子扣减 + 防超扣：高并发下不会出现两次购买都成功导致 star 变负数
+        // 扣减失败(余额不足或 uid 不存在)直接返回，不写入关卡记录
+        if (!userService.deductUserStar(uid, getNeedStar(aid))) {
+            return false;
+        }
         return addTimeTrialClassForUser(uid, aid);
     }
 
@@ -124,6 +127,7 @@ public class TimeTrialClassService {
         if (ObjUtil.isEmpty(model)) {
             return false;
         }
-        return userService.updateUserStar(uid, model.getStar() + userService.getUserStar(uid));
+        // 原子累加，避免并发下两次发奖各读一次旧值再写回，造成一次奖励被覆盖丢失
+        return userService.incrUserStar(uid, model.getStar());
     }
 }

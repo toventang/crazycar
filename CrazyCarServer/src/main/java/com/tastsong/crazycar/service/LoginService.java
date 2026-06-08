@@ -64,7 +64,7 @@ public class LoginService {
         userService.insert(userModel);
 
 		int uid = userModel.getUid();
-        if(avatarService.hasAvatar(uid, defaultAid)){
+        if(!avatarService.hasAvatar(uid, defaultAid)){
             avatarService.addAvatarForUser(uid, defaultAid);
         }
 
