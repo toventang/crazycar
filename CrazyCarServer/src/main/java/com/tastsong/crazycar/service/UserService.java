@@ -7,6 +7,7 @@ import com.tastsong.crazycar.mapper.UserMapper;
 import com.tastsong.crazycar.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -73,6 +74,7 @@ public class UserService {
         return !ObjUtil.isEmpty(userMapper.selectById(uid));
     }
 
+    @Transactional(rollbackFor = Exception.class)
     public void updateUser(UserModel userModel){
         updateUserStar(userModel.getUid(), userModel.getStar());
         updateUserVip(userModel.getUid(), userModel.is_vip());
@@ -85,6 +87,23 @@ public class UserService {
         }
         userModel.setStar(star);
         return userMapper.updateById(userModel) > 0;
+    }
+
+    /**
+     * 原子累加用户星币(delta 可正可负)，避免并发下两次读改写互相覆盖。
+     * 推荐替代 "getUserStar + updateUserStar" 的写法。
+     * @return 是否成功(uid 不存在或受影响行数 0 时返回 false)
+     */
+    public boolean incrUserStar(int uid, int delta){
+        return userMapper.incrUserStar(uid, delta) > 0;
+    }
+
+    /**
+     * 原子扣减星币 + 防超扣。失败原因可能是余额不足或 uid 不存在。
+     * 调用方应根据返回值决定后续动作(如终止购买流程)。
+     */
+    public boolean deductUserStar(int uid, int needStar){
+        return userMapper.deductUserStar(uid, needStar) > 0;
     }
 
     public boolean updateUserVip(int uid, boolean isVip) {

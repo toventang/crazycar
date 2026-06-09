@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.tastsong.crazycar.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.tastsong.crazycar.mapper.TimeTrialRecordMapper;
 import com.tastsong.crazycar.dto.resp.RespTimeTrialRank;
@@ -20,6 +21,8 @@ public class TimeTrialRecordService {
     private TimeTrialRecordMapper timeTrialRecordMapper;
     @Autowired
     private UserService userService;
+    @Autowired
+    private TimeTrialClassService timeTrialClassService;
 
     public int getTimeTrialTimes(int uid){
         QueryWrapper<TimeTrialRecordModel> queryWrapper = new QueryWrapper<>();
@@ -96,5 +99,21 @@ public class TimeTrialRecordService {
 
     public void insertRecord(TimeTrialRecordModel recordModel){
         timeTrialRecordMapper.insert(recordModel);
+    }
+
+    /**
+     * 结算一次计时赛成绩：判定破纪录 -> 发奖励 -> 写入记录
+     * 三步在同一事务内执行，避免奖励已下发但记录未落库(或反之)造成的星币-账本不一致。
+     * @param recordModel 待写入的比赛记录(uid/cid/complete_time/record_time 必填)
+     * @return 是否破纪录，由上层用于构造响应(reward / rank)
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public boolean settleResult(TimeTrialRecordModel recordModel){
+        boolean isBreakRecord = isBreakRecord(recordModel);
+        if (isBreakRecord) {
+            timeTrialClassService.giveReward(recordModel.getUid(), recordModel.getCid());
+        }
+        insertRecord(recordModel);
+        return isBreakRecord;
     }
 }

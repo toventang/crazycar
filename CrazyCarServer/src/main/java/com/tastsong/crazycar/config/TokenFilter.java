@@ -36,24 +36,25 @@ public class TokenFilter implements Filter{
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         log.info("TokenFilter, URL:{}", request.getRequestURI());      
-        try {
-            String token = request.getHeader(Util.TOKEN);
-            if(!token.isEmpty() && Util.isLegalToken(token)){
-                log.info("legal URL:{}", request.getRequestURI());     
-                filterChain.doFilter(servletRequest, servletResponse);
-            } else{
-                log.info("illegality URL:{}", request.getRequestURI());
-                response.setStatus(HttpServletResponse.SC_METHOD_NOT_ALLOWED);
-                PrintWriter writer = response.getWriter();
-                writer.print(JSONUtil.toJsonStr(Result.failure(ResultCode.RC204)));
-            }
-        } catch (Exception e) {
+        String token = request.getHeader(Util.TOKEN);
+        if (token == null || token.isEmpty()) {
             log.info("missing Token,or interface error:{}", request.getRequestURI());
-            log.error(e.getMessage());
             response.setStatus(HttpServletResponse.SC_METHOD_NOT_ALLOWED);
             PrintWriter writer = response.getWriter();
             writer.print(JSONUtil.toJsonStr(Result.failure(ResultCode.RC203)));
+            return;
         }
+
+        if (!Util.isLegalToken(token)) {
+            log.info("illegality URL:{}", request.getRequestURI());
+            response.setStatus(HttpServletResponse.SC_METHOD_NOT_ALLOWED);
+            PrintWriter writer = response.getWriter();
+            writer.print(JSONUtil.toJsonStr(Result.failure(ResultCode.RC204)));
+            return;
+        }
+
+        log.info("legal URL:{}", request.getRequestURI());
+        filterChain.doFilter(servletRequest, servletResponse);
     }
 
     @Override

@@ -64,11 +64,14 @@ public class EquipService {
         return userService.getUserStar(uid) >= getEquipNeedStar(eid);
     }
 
-    @Transactional
-    public void buyEquip(int uid, int eid){
-        int curStar = userService.getUserStar(uid) - getEquipNeedStar(eid);
-        userService.updateUserStar(uid, curStar);
-        addEquipForUser(uid, eid);
+    @Transactional(rollbackFor = Exception.class)
+    public boolean buyEquip(int uid, int eid){
+        // 原子扣减 + 防超扣：高并发下不会出现两次购买都成功导致 star 变负数
+        // 扣减失败(余额不足或 uid 不存在)直接返回，不写入装备记录
+        if (!userService.deductUserStar(uid, getEquipNeedStar(eid))) {
+            return false;
+        }
+        return addEquipForUser(uid, eid);
     }
 
     private int getEquipNeedStar(int eid){
