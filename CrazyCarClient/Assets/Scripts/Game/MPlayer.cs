@@ -181,6 +181,8 @@ public class MPlayer : MonoBehaviour, IController {
             rig.velocity = Vector3.SmoothDamp(rig.velocity, speed, ref currentVelocity, Time.deltaTime * smoothSpeed);
             time -= Time.deltaTime;
         }
+        // P17 + R7 关联修复：协程自然结束时清空 Coroutine 引用，避免悬挂引用干扰下次 StopCoroutine
+        moveNetCarCor = null;
     }
 
     //计算加力方向
@@ -402,7 +404,23 @@ public class MPlayer : MonoBehaviour, IController {
     }
 
     public void DestroySelf() {
+        // R7 修复：销毁前显式停止本 MPlayer 上由 StartCoroutine 启动的协程，
+        // 并将引用字段置 null，避免协程在 yield 间状态下访问已销毁对象。
+        // 注：OnTriggerEnter 内通过 Util.DelayExecuteWithSecond 启动的协程
+        // 运行在 CoroutineController 静态单例上，不在此处理（不在 R7 修复范围）。
+        _StopAllCoroutines();
         Destroy(gameObject);
+    }
+
+    private void _StopAllCoroutines() {
+        if (speedUpCor != null) {
+            StopCoroutine(speedUpCor);
+            speedUpCor = null;
+        }
+        if (moveNetCarCor != null) {
+            StopCoroutine(moveNetCarCor);
+            moveNetCarCor = null;
+        }
     }
 
     public void BeHit(float slowAmount, bool isCrit) {
