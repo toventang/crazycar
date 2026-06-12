@@ -28,6 +28,16 @@ public class MPlayerStyle : MonoBehaviour, IController {
     private float screenEffectTime = 0;
     private MPlayer mPlayer;
     private bool isStartDrift = false;
+    // 缓存架构引用，避免 FixedUpdate 热路径中每帧通过 IoC 容器查找
+    private IPlayerManagerSystem _playerManager;
+    private IScreenEffectsSystem _screenEffectsSystem;
+    private IVibrationSystem _vibrationSystem;
+
+    private void Awake() {
+        _playerManager = this.GetSystem<IPlayerManagerSystem>();
+        _screenEffectsSystem = this.GetSystem<IScreenEffectsSystem>();
+        _vibrationSystem = this.GetSystem<IVibrationSystem>();
+    }
 
     private void Start() {
         if (GetComponent<MPlayer>() != null) {
@@ -59,9 +69,9 @@ public class MPlayerStyle : MonoBehaviour, IController {
             EndDrift();
         }
 
-        if (this.GetSystem<IPlayerManagerSystem>().SelfPlayer == mPlayer && !mPlayer.isGround) {
-            this.GetSystem<IScreenEffectsSystem>().ShakeCamera();
-            this.GetSystem<IVibrationSystem>().Haptic();
+        if (_playerManager.SelfPlayer == mPlayer && !mPlayer.isGround) {
+            _screenEffectsSystem.ShakeCamera();
+            _vibrationSystem.Haptic();
         }
     }
 

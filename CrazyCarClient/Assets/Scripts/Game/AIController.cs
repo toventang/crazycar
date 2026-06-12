@@ -33,6 +33,12 @@ public class AIController : MonoBehaviour, IController {
     private Dictionary<int, AIInfo> aiInfoDic = new Dictionary<int, AIInfo>();
 
     private bool playerFinishTimeTrial = false;
+    // 缓存架构引用，避免 Update 中每帧通过 IoC 容器查找
+    private IGameModel _gameModel;
+
+    private void Awake() {
+        _gameModel = this.GetModel<IGameModel>();
+    }
 
     private void OnEnable() {
         playerFinishTimeTrial = false;
@@ -69,7 +75,7 @@ public class AIController : MonoBehaviour, IController {
     }
 
     private void Update() {
-        if (this.GetModel<IGameModel>().CurGameType == GameType.TimeTrial) {
+        if (_gameModel.CurGameType == GameType.TimeTrial) {
             if (playerFinishTimeTrial) {
                 return;
             }
