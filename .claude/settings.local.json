@@ -11,7 +11,12 @@
       "Bash(python3:*)",
       "Bash(pnpm --filter @understand-anything/core build:*)",
       "Bash(xargs wc -l)",
-      "Bash(xargs grep -l \"GameController\\\\|@ServerEndpoint\\\\|websocket\")"
+      "Bash(xargs grep -l \"GameController\\\\|@ServerEndpoint\\\\|websocket\")",
+      "Bash(mkdir -p /tmp/r7-syntax-check)",
+      "Read(//tmp/**)",
+      "Bash(dotnet new *)",
+      "Bash(dotnet build *)",
+      "Bash(dotnet run *)"
     ]
   }
 }

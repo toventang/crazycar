@@ -49,12 +49,12 @@ public class ProfileUI : MonoBehaviour, IController {
     private void Start() {
         closeBtn.onClick.AddListener(() => {
             this.GetSystem<ISoundSystem>().PlaySound(SoundType.Close);
-            UIController.Instance.HidePage(UIPageType.ProfileUI);
+            this.GetSystem<IUISystem>().HidePage(UIPageType.ProfileUI);
         });
         userNameBtn.onClick.AddListener(() => {
             if (userNameInput.text == this.GetModel<IUserModel>().Name.Value) {
                 WarningAlertInfo alertInfo = new WarningAlertInfo("Consistent with the original nickname");
-                UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+                this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
             } else {
             }
         });
@@ -62,10 +62,10 @@ public class ProfileUI : MonoBehaviour, IController {
             this.GetSystem<ISoundSystem>().PlaySound(SoundType.Button_Low);
             if (passwordInput.text == this.GetModel<IUserModel>().Password.Value) {
                 WarningAlertInfo alertInfo = new WarningAlertInfo("Consistent with the original password");
-                UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+                this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
             } else if (passwordInput.text.Length < 6) {
                 WarningAlertInfo alertInfo = new WarningAlertInfo("The password must contain more than six characters");
-                UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+                this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
             } else {
                 this.SendCommand(new ChangePasswordCommand(passwordInput.text));
             }
@@ -74,7 +74,7 @@ public class ProfileUI : MonoBehaviour, IController {
         guidanceBtn.onClick.AddListener(() => {
             this.GetModel<IUserModel>().IsCompleteGuidance.Value = false;
             WarningAlertInfo alertInfo = new WarningAlertInfo("重新进入，即可重启新手教程");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
         });
     }
 }

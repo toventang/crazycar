@@ -25,14 +25,14 @@ public class ChangePasswordCommand : AbstractCommand {
             token: this.GetModel<IGameModel>().Token.Value, bytes);
         if (result.serverCode == 200) {
             WarningAlertInfo alertInfo = new WarningAlertInfo("Modify Successfully");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
             this.GetModel<IUserModel>().Password.Value = mPassword;
         } else if (result.serverCode == 423) {
             WarningAlertInfo alertInfo = new WarningAlertInfo("Fail To Modify");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
         } else if (result.serverCode == 404) {
             WarningAlertInfo alertInfo = new WarningAlertInfo("Information Error");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
         }
     }
 }

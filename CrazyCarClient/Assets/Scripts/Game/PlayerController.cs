@@ -12,8 +12,10 @@ public class PlayerController : MonoBehaviour, IController {
     public Transform thirdAngle;
 
     private float widthUnit = 4.4f;
+    private EasyObjectsFade _easyObjectsFade;
 
     private void Awake() {
+        _easyObjectsFade = Camera.main.GetComponent<EasyObjectsFade>();
         this.RegisterEvent<MakeNewPlayerEvent>(OnMakeNewPlayer).UnRegisterWhenGameObjectDestroyed(gameObject);
         this.RegisterEvent<ChangeAngleViewEvent>(OnChangeAngleView).UnRegisterWhenGameObjectDestroyed(gameObject);
         this.RegisterEvent<PeerControllerEvent>(OnPeerController).UnRegisterWhenGameObjectDestroyed(gameObject);
@@ -39,7 +41,7 @@ public class PlayerController : MonoBehaviour, IController {
             this.GetModel<IUserModel>().IsVIP.Value);
 
         // 遮挡透视功能
-        Camera.main.GetComponent<EasyObjectsFade>().playerTransform = selfPlayer.GetComponent<Transform>();
+        _easyObjectsFade.playerTransform = selfPlayer.GetComponent<Transform>();
     }
 
     private void OnMakeNewPlayer(MakeNewPlayerEvent e) {

@@ -28,8 +28,8 @@ public class UISceneLoadingCtrl : MonoBehaviour, IController {
         this.GetModel<IGameModel>().SceneLoaded.Value = false;
         this.GetModel<IGameModel>().SceneLoading.Value = true;
 
-        UIController.Instance.HidePageByLevel(UILevelType.Main);
-        UIController.Instance.HidePageByLevel(UILevelType.UIPage);
+        this.GetSystem<IUISystem>().HidePageByLevel(UILevelType.Main);
+        this.GetSystem<IUISystem>().HidePageByLevel(UILevelType.UIPage);
         progressSlider.value = 0;
         progressText.text = (int)(progressSlider.value * 100) + "%";
         progressSlider.value = 0.1f;
@@ -58,7 +58,7 @@ public class UISceneLoadingCtrl : MonoBehaviour, IController {
         this.GetModel<IGameModel>().SceneLoading.Value = false;
 
         if (this.GetModel<IGameModel>().LoadingTargetSceneID == SceneID.Index) {
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.HomepageUI, UILevelType.Main));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.HomepageUI, UILevelType.Main));
         } else if (this.GetModel<IGameModel>().LoadingTargetSceneID == SceneID.Game) {
             SelectGameUI();
         }
@@ -67,12 +67,12 @@ public class UISceneLoadingCtrl : MonoBehaviour, IController {
     }
 
     private void SelectGameUI() {
-        UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.CommonGameUI, UILevelType.Main));
-        UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.InputSystemPanel, UILevelType.Main));
+        this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.CommonGameUI, UILevelType.Main));
+        this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.InputSystemPanel, UILevelType.Main));
         if (this.GetModel<IGameModel>().CurGameType == GameType.Match) {
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.MatchGameUI, UILevelType.UIPage));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.MatchGameUI, UILevelType.UIPage));
         } else if (this.GetModel<IGameModel>().CurGameType == GameType.TimeTrial) {
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.TimeTrailGameUI, UILevelType.UIPage));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.TimeTrailGameUI, UILevelType.UIPage));
         }
     }
 

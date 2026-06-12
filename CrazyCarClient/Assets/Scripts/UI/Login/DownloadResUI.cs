@@ -44,7 +44,7 @@ public class DownloadResUI : MonoBehaviour, IController {
                         Application.Quit();
                     },
                     confirmText: "Download");
-                UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
+                this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
             } else {
                 DownloadRes();
             }
