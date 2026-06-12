@@ -21,7 +21,7 @@ public class RankDetailItem : MonoBehaviour, IController {
             this.GetSystem<ISoundSystem>().PlaySound(SoundType.Button_Low);
             this.GetModel<ITimeTrialModel>().SelectInfo.Value = timeTrialInfo;
 
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.TimeTrialRankUI));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.TimeTrialRankUI));
         });
     }
 

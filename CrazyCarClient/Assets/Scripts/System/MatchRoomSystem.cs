@@ -154,15 +154,15 @@ public class MatchRoomSystem : AbstractSystem, IMatchRoomSystem {
             this.SendEvent<MatchRoomCreateOrJoinSuccEvent>();
         } else if (code == 421) {
             WarningAlertInfo info = new WarningAlertInfo("Room already exists");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, info));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, info));
             this.SendEvent<MatchRoomCreateOrJoinFailEvent>();
         } else if (code == 422) {
             WarningAlertInfo info = new WarningAlertInfo("The number of rooms has reached the upper limit");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, info));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, info));
             this.SendEvent<MatchRoomCreateOrJoinFailEvent>();
         } else if (code == 423) {
             WarningAlertInfo info = new WarningAlertInfo("Token Past Due");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, info));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, info));
             this.SendEvent<MatchRoomCreateOrJoinFailEvent>();
         }
     }
@@ -173,7 +173,7 @@ public class MatchRoomSystem : AbstractSystem, IMatchRoomSystem {
         if (code == 404) {
             InfoConfirmInfo info = new InfoConfirmInfo(content: "Without this room",
                 success: () => { this.SendEvent<MatchRoomExitEvent>(); }, type: ConfirmAlertType.Single);
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
         } else if (code == 200) {
             JsonData data = recJD["data"];
             int exitUid = (int)data["exit_uid"];
@@ -182,10 +182,10 @@ public class MatchRoomSystem : AbstractSystem, IMatchRoomSystem {
             } else if (this.GetModel<IMatchModel>().MemberInfoDic[exitUid].isHouseOwner) {
                 InfoConfirmInfo info = new InfoConfirmInfo(content: "The owner quits and the room dissolves",
                     success: () => { this.SendEvent<MatchRoomExitEvent>(); }, type: ConfirmAlertType.Single);
-                UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
+                this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
             } else {
                 WarningAlertInfo alertInfo = new WarningAlertInfo("Members of the exit");
-                UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+                this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
                 JsonData players = data["players"];
                 var infos = this.GetModel<IMatchModel>().MemberInfoDic;
                 infos.Clear();
@@ -212,15 +212,15 @@ public class MatchRoomSystem : AbstractSystem, IMatchRoomSystem {
             this.SendEvent<MatchRoomCreateOrJoinSuccEvent>();
         } else if (code == 404) {
             WarningAlertInfo alertInfo = new WarningAlertInfo("Without this room");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
             this.SendEvent<MatchRoomCreateOrJoinFailEvent>();
         } else if (code == 422) {
             WarningAlertInfo alertInfo = new WarningAlertInfo("The room is full");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
             this.SendEvent<MatchRoomCreateOrJoinFailEvent>();
         } else if (code == 423) {
             WarningAlertInfo alertInfo = new WarningAlertInfo("Token Past Due");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
             this.SendEvent<MatchRoomCreateOrJoinFailEvent>();
         }
     }
@@ -253,12 +253,12 @@ public class MatchRoomSystem : AbstractSystem, IMatchRoomSystem {
             } else {
                 InfoConfirmInfo info = new InfoConfirmInfo(content: "The owner quits and the room dissolves",
                     success: () => { this.SendEvent<MatchRoomExitEvent>(); }, type: ConfirmAlertType.Single);
-                UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
+                this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
             }
         } else if (code == 404) {
             InfoConfirmInfo info = new InfoConfirmInfo(content: "Without this room",
                 success: () => { this.SendEvent<MatchRoomExitEvent>(); }, type: ConfirmAlertType.Single);
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
         }
     }
 
@@ -271,7 +271,7 @@ public class MatchRoomSystem : AbstractSystem, IMatchRoomSystem {
         } else {
             WarningAlertInfo alertInfo =
                 new WarningAlertInfo("This map requires all player vehicles to be able to wade");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
         }
     }
 

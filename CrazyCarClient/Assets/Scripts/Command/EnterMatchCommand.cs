@@ -20,7 +20,7 @@ public class EnterMatchCommand : AbstractCommand {
             this.SendCommand(new LoadSceneCommand(SceneID.Game));
         } else {
             WarningAlertInfo alertInfo = new WarningAlertInfo("The game is over");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
         }
     }
 

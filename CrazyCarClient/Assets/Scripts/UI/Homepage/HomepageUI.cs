@@ -35,7 +35,7 @@ public class HomepageUI : MonoBehaviour, IController {
                 return;
             }
 
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.AvatarUI));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.AvatarUI));
         });
 
         joinGameBtn.onClick.AddListener(() => {
@@ -44,7 +44,7 @@ public class HomepageUI : MonoBehaviour, IController {
             }
 
             this.GetSystem<ISoundSystem>().PlaySound(SoundType.Button_Low);
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.TimeTrialDetailUI));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.TimeTrialDetailUI));
         });
         matchBtn.onClick.AddListener(async () => {
             this.GetSystem<ISoundSystem>().PlaySound(SoundType.Button_Low);
@@ -59,10 +59,10 @@ public class HomepageUI : MonoBehaviour, IController {
             if (result.serverCode == 200) {
                 this.GetSystem<IDataParseSystem>().ParseMatchMapData(result.serverData);
                 if (this.GetModel<IMatchModel>().MatchDic.Count > 0) {
-                    UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.MatchRoomUI));
+                    this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.MatchRoomUI));
                 } else {
                     WarningAlertInfo alertInfo = new WarningAlertInfo("No game");
-                    UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart,
+                    this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart,
                         alertInfo));
                 }
             }
@@ -89,12 +89,12 @@ public class HomepageUI : MonoBehaviour, IController {
         infoBtn.onClick.AddListener(() => {
             this.GetSystem<ISoundSystem>().PlaySound(SoundType.Button_Low);
             InfoConfirmInfo info = new InfoConfirmInfo(title: "Version", content: "当前版本为：" + Application.version);
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
         });
         questionBtn.onClick.AddListener(() => {
             this.GetSystem<ISoundSystem>().PlaySound(SoundType.Button_Low);
             InfoConfirmInfo info = new InfoConfirmInfo(title: "Content", content: "作者：TastSong 邮箱地址：TastSong@163.com");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
         });
         exitBtn.onClick.AddListener(() => {
             this.GetSystem<ISoundSystem>().PlaySound(SoundType.Button_Low);
@@ -110,11 +110,11 @@ public class HomepageUI : MonoBehaviour, IController {
                 return;
             }
 
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.ProfileUI));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.ProfileUI));
         });
         settingBtn.onClick.AddListener(() => {
             this.GetSystem<ISoundSystem>().PlaySound(SoundType.Button_Low);
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.SettingsUI));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.SettingsUI));
         });
         rankBtn.onClick.AddListener(() => {
             this.GetSystem<ISoundSystem>().PlaySound(SoundType.Button_Low);
@@ -123,7 +123,7 @@ public class HomepageUI : MonoBehaviour, IController {
                 return;
             }
 
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.RankUI));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.RankUI));
         });
         changeCarBtn.onClick.AddListener(() => {
             this.GetSystem<ISoundSystem>().PlaySound(SoundType.Button_Low);
@@ -132,8 +132,8 @@ public class HomepageUI : MonoBehaviour, IController {
                 return;
             }
 
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.ChangeCarUI));
-            UIController.Instance.HidePage(UIPageType.HomepageUI);
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.ChangeCarUI));
+            this.GetSystem<IUISystem>().HidePage(UIPageType.HomepageUI);
         });
         // --------- Bottom Btns ---------
 
@@ -143,7 +143,7 @@ public class HomepageUI : MonoBehaviour, IController {
 
     private void ShowStandAlone() {
         WarningAlertInfo alertInfo = new WarningAlertInfo("This function is unavailable in single-machine mode");
-        UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+        this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
     }
 
     private async void OnUpdataUI(UpdateHomepageUIEvent e) {

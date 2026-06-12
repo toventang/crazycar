@@ -11,7 +11,7 @@ public class RankUI : MonoBehaviour, IController {
     public Button closeBtn;
 
     private async void OnEnable() {
-        UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.LoadingUI, UILevelType.Alart));
+        this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.LoadingUI, UILevelType.Alart));
         var result = await this.GetSystem<INetworkSystem>().Post(url: this.GetSystem<INetworkSystem>().HttpBaseUrl +
                                                                       RequestUrl.timeTrialDetailUrl,
             token: this.GetModel<IGameModel>().Token.Value);
@@ -33,7 +33,7 @@ public class RankUI : MonoBehaviour, IController {
     private void Start() {
         closeBtn.onClick.AddListener(() => {
             this.GetSystem<ISoundSystem>().PlaySound(SoundType.Close);
-            UIController.Instance.HidePage(UIPageType.RankUI);
+            this.GetSystem<IUISystem>().HidePage(UIPageType.RankUI);
         });
     }
 

@@ -8,7 +8,7 @@ public class InitUIState : AbstractState<LaunchStates, Launch>, IController {
     }
 
     public override async void OnEnter() {
-        await UIController.Instance.InitUI();
+        await this.GetSystem<IUISystem>().InitUI();
         ChangeState();
     }
 
@@ -18,7 +18,7 @@ public class InitUIState : AbstractState<LaunchStates, Launch>, IController {
 
     public override void OnExit() {
         // loading 的特殊性，可能还未准备好，就会被关闭，所以提前准备
-        UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.LoadingUI, UILevelType.Prepare));
+        this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.LoadingUI, UILevelType.Prepare));
     }
 
     public IArchitecture GetArchitecture() {
