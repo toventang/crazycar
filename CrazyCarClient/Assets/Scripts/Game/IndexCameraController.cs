@@ -6,17 +6,22 @@ public class IndexCameraController : MonoBehaviour {
     public float cameraRotateSpeed = 5;
     public Transform vehicleRoot;
     private float x, y = 0;
+    private Camera _camera;
+
+    private void Awake() {
+        _camera = Camera.main;
+    }
 
     private void Update() {
 #if UNITY_STANDALONE || UNITY_WEBGL || UNITY_EDITOR
 
         if (Input.GetMouseButton(0) && Input.mousePosition.y > (Screen.height / 3)) {
             x = Mathf.Lerp(x, Mathf.Clamp(Input.GetAxis("Mouse X"), -2, 2) * cameraRotateSpeed, Time.deltaTime * 5.0f);
-            Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView, 50, 60);
-            Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 50, Time.deltaTime);
+            _camera.fieldOfView = Mathf.Clamp(_camera.fieldOfView, 50, 60);
+            _camera.fieldOfView = Mathf.Lerp(_camera.fieldOfView, 50, Time.deltaTime);
         } else {
             x = Mathf.Lerp(x, cameraRotateSpeed * 0.01f, Time.deltaTime * 5.0f);
-            Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 60, Time.deltaTime);
+            _camera.fieldOfView = Mathf.Lerp(_camera.fieldOfView, 60, Time.deltaTime);
         }
 
 
@@ -28,15 +33,15 @@ public class IndexCameraController : MonoBehaviour {
                 case TouchPhase.Moved:
                     x =
  Mathf.Lerp(x, Mathf.Clamp(Input.GetTouch(0).deltaPosition.x, -2, 2) * cameraRotateSpeed, Time.deltaTime*3.0f);
-                    Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView, 50, 60);
-                    Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 50, Time.deltaTime);
+                    _camera.fieldOfView = Mathf.Clamp(_camera.fieldOfView, 50, 60);
+                    _camera.fieldOfView = Mathf.Lerp(_camera.fieldOfView, 50, Time.deltaTime);
                     break;
             }
 
         }
         else {
             x = Mathf.Lerp(x, cameraRotateSpeed * 0.02f, Time.deltaTime*3.0f);
-            Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 60, Time.deltaTime);
+            _camera.fieldOfView = Mathf.Lerp(_camera.fieldOfView, 60, Time.deltaTime);
         }
 
 #endif
