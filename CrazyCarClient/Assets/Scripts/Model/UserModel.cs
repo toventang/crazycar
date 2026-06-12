@@ -109,13 +109,7 @@ public class UserModel : AbstractModel, IUserModel {
         IsSuperuser.Value = storage.LoadInt(PrefKeys.isSuperuser) == 1;
         IsSuperuser.Register(v => {
             storage.SaveInt(PrefKeys.isSuperuser, v ? 1 : 0);
-            if (IsSuperuser) {
-                ((IBelongToArchitecture)this).GetArchitecture().GetSystem<IUISystem>()
-                    .ShowPage(new ShowPageInfo(UIPageType.GameHelper, UILevelType.Debug));
-            } else {
-                ((IBelongToArchitecture)this).GetArchitecture().GetSystem<IUISystem>()
-                    .HidePage(UIPageType.GameHelper);
-            }
+            this.SendEvent<SuperuserChangedEvent>(new SuperuserChangedEvent(v));
         });
     }
 }
