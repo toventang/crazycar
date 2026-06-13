@@ -79,6 +79,11 @@ public class MPlayer : MonoBehaviour, IController {
     private float mp = 100;
     private float maxMp = 100;
 
+    // 缓存架构引用，避免 FixedUpdate 热路径中每帧通过 IoC 容器查找
+    private IGameModel _gameModel;
+    private IPlayerManagerSystem _playerManager;
+    private IMapControllerModel _mapControllerModel;
+
     public float Mp {
         get { return mp; }
         set {
@@ -92,8 +97,14 @@ public class MPlayer : MonoBehaviour, IController {
     }
     ///// 技能系统 ////
 
+    private void Awake() {
+        _gameModel = this.GetModel<IGameModel>();
+        _playerManager = this.GetSystem<IPlayerManagerSystem>();
+        _mapControllerModel = this.GetModel<IMapControllerModel>();
+    }
+
     private void Start() {
-        pathCreator = this.GetModel<IMapControllerModel>().PathCreator;
+        pathCreator = _mapControllerModel.PathCreator;
         forceDirHorizontal = transform.forward;
         rotationStream = rig.rotation;
         skillSystem = GetComponent<CharacterSkillSystem>();
@@ -110,16 +121,16 @@ public class MPlayer : MonoBehaviour, IController {
             return;
         }
 
-        if (this.GetModel<IGameModel>().CurGameType == GameType.TimeTrial &&
-            this.GetSystem<IPlayerManagerSystem>().SelfPlayer != this) {
+        if (_gameModel.CurGameType == GameType.TimeTrial &&
+            _playerManager.SelfPlayer != this) {
             // 为AI终止
             return;
         }
 
-        if (this.GetModel<IGameModel>().CurGameType == GameType.Match &&
-            this.GetSystem<IPlayerManagerSystem>().SelfPlayer != this && lastRecvStatusStamp != 0) {
-            if (Util.GetTime() - lastRecvStatusStamp > this.GetModel<IGameModel>().MaxSyncDelay) {
-                this.GetSystem<IPlayerManagerSystem>().RemovePlayer(userInfo.uid);
+        if (_gameModel.CurGameType == GameType.Match &&
+            _playerManager.SelfPlayer != this && lastRecvStatusStamp != 0) {
+            if (Util.GetTime() - lastRecvStatusStamp > _gameModel.MaxSyncDelay) {
+                _playerManager.RemovePlayer(userInfo.uid);
             }
         }
 
@@ -173,7 +184,7 @@ public class MPlayer : MonoBehaviour, IController {
     }
 
     private IEnumerator MoveNetCar(Vector3 pos, Vector3 speed) {
-        float time = this.GetModel<IGameModel>().SendMsgOffTime / 2;
+        float time = _gameModel.SendMsgOffTime / 2;
         while (time > 0) {
             yield return new WaitForSecondsRealtime(Time.deltaTime);
             transform.position = Vector3.Lerp(transform.position, pos, Time.deltaTime * smoothSpeed);
@@ -181,6 +192,8 @@ public class MPlayer : MonoBehaviour, IController {
             rig.velocity = Vector3.SmoothDamp(rig.velocity, speed, ref currentVelocity, Time.deltaTime * smoothSpeed);
             time -= Time.deltaTime;
         }
+        // P17 + R7 关联修复：协程自然结束时清空 Coroutine 引用，避免悬挂引用干扰下次 StopCoroutine
+        moveNetCarCor = null;
     }
 
     //计算加力方向
@@ -200,7 +213,7 @@ public class MPlayer : MonoBehaviour, IController {
         //计算合力
         Vector3 tempForce = verticalModified * currentForce * forceDirHorizontal;
 
-        if (this.GetSystem<IPlayerManagerSystem>().SelfPlayer == this && !isGround) {
+        if (_playerManager.SelfPlayer == this && !isGround) {
             tempForce = tempForce + gravity * Vector3.down;
         }
 
@@ -212,7 +225,7 @@ public class MPlayer : MonoBehaviour, IController {
             if (pathCreator != null) {
                 Vector3 closestPos = pathCreator.path.GetClosestPointOnPath(transform.position);
                 float dis = Vector3.Distance(closestPos, transform.position);
-                return dis > this.GetModel<IMapControllerModel>().RoadWidth;
+                return dis > _mapControllerModel.RoadWidth;
             } else {
                 return false;
             }
@@ -402,7 +415,23 @@ public class MPlayer : MonoBehaviour, IController {
     }
 
     public void DestroySelf() {
+        // R7 修复：销毁前显式停止本 MPlayer 上由 StartCoroutine 启动的协程，
+        // 并将引用字段置 null，避免协程在 yield 间状态下访问已销毁对象。
+        // 注：OnTriggerEnter 内通过 Util.DelayExecuteWithSecond 启动的协程
+        // 运行在 CoroutineController 静态单例上，不在此处理（不在 R7 修复范围）。
+        _StopAllCoroutines();
         Destroy(gameObject);
+    }
+
+    private void _StopAllCoroutines() {
+        if (speedUpCor != null) {
+            StopCoroutine(speedUpCor);
+            speedUpCor = null;
+        }
+        if (moveNetCarCor != null) {
+            StopCoroutine(moveNetCarCor);
+            moveNetCarCor = null;
+        }
     }
 
     public void BeHit(float slowAmount, bool isCrit) {

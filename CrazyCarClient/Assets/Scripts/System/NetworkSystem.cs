@@ -137,7 +137,7 @@ public class NetworkSystem : AbstractSystem, INetworkSystem {
                 var response = await request.SendWebRequest().WithCancellation(default);
                 //var response = request;
                 //await UniTask.WaitUntil(() => request.isDone);
-                UIController.Instance.HidePage(UIPageType.LoadingUI);
+                this.GetSystem<IUISystem>().HidePage(UIPageType.LoadingUI);
                 if (response.isNetworkError || response.responseCode != 200) {
                     return new TaskableAccessResult(null, response.responseCode,
                         new Exception("Http Access Error Code Return"));
@@ -149,7 +149,7 @@ public class NetworkSystem : AbstractSystem, INetworkSystem {
             }
         } catch (Exception e) {
             Debug.LogError("http" + e);
-            UIController.Instance.HidePage(UIPageType.LoadingUI);
+            this.GetSystem<IUISystem>().HidePage(UIPageType.LoadingUI);
             if (e is UnityWebRequestException) {
                 UnityWebRequestException ex = e as UnityWebRequestException;
                 return new TaskableAccessResult(null, ex.ResponseCode, e);
@@ -287,10 +287,10 @@ public class NetworkSystem : AbstractSystem, INetworkSystem {
         } else if (result.serverCode == 423) {
             if (gameType == GameType.Match) {
                 WarningAlertInfo alertInfo = new WarningAlertInfo("The match is currently open only to VIP users");
-                UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+                this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
             } else {
                 WarningAlertInfo alertInfo = new WarningAlertInfo("Do not own this course");
-                UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+                this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
             }
         }
 

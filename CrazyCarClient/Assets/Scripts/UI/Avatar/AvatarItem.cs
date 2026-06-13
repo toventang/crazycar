@@ -27,11 +27,11 @@ public class AvatarItem : MonoBehaviour, IPointerClickHandler, IController {
                         avatarInfo.star),
                     success: () => { this.SendCommand(new BuyAvatarCommand(avatarInfo)); },
                     fail: () => { Debug.Log("放弃购买"); });
-                UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
+                this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
             } else {
                 WarningAlertInfo alertInfo = new WarningAlertInfo(
                     string.Format(this.GetSystem<II18NSystem>().GetText("This head needs {0} star"), avatarInfo.star));
-                UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+                this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
             }
         }
     }

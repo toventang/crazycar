@@ -37,12 +37,12 @@ public class BuyEquipCommand : AbstractCommand {
                     mEquipInfo.star),
                 success: Buy,
                 fail: () => { Debug.Log(this.GetSystem<II18NSystem>().GetText("Give up to buy")); });
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.InfoConfirmAlert, UILevelType.Alart, info));
         } else {
             WarningAlertInfo alertInfo = new WarningAlertInfo(string.Format(
                 this.GetSystem<II18NSystem>().GetText("This equip requires {0} star"),
                 mEquipInfo.star));
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
         }
     }
 }

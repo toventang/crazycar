@@ -12,7 +12,7 @@ public class InitGameConfigState : AbstractState<LaunchStates, Launch>, IControl
         InitSettingsInfo();
 
         if (this.GetUtility<IPlayerPrefsStorage>().LoadInt(PrefKeys.isSuperuser) == 1) {
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.GameHelper, UILevelType.Debug));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.GameHelper, UILevelType.Debug));
         }
 
         ChangeState();

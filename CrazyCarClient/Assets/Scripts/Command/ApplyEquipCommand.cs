@@ -27,11 +27,11 @@ public class ApplyEquipCommand : AbstractCommand {
             this.GetModel<IUserModel>().EquipInfo.Value =
                 this.GetModel<IEquipModel>().EquipDic[(int)result.serverData["eid"]];
             WarningAlertInfo alertInfo = new WarningAlertInfo("Successfully Set");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
             this.SendEvent<ApplyEquipEvent>();
         } else if (result.serverCode == 423) {
             WarningAlertInfo alertInfo = new WarningAlertInfo("Did not have");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
         }
     }
 }

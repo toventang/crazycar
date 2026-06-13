@@ -26,14 +26,14 @@ public class ChangeCarUI : MonoBehaviour, IController {
     private List<ChangeCarItem> changeCarItems = new List<ChangeCarItem>();
 
     private async void OnEnable() {
-        UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.LoadingUI, UILevelType.Alart));
+        this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.LoadingUI, UILevelType.Alart));
         string url = this.GetSystem<INetworkSystem>().HttpBaseUrl + RequestUrl.equipUrl;
         var result = await this.GetSystem<INetworkSystem>().Post(url, token: this.GetModel<IGameModel>().Token.Value);
         if (result.serverCode == 200) {
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.LoadingUI, UILevelType.Alart));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.LoadingUI, UILevelType.Alart));
             this.GetSystem<IDataParseSystem>().ParseEquipRes(result.serverData);
             await SetItemContent();
-            UIController.Instance.HidePage(UIPageType.LoadingUI);
+            this.GetSystem<IUISystem>().HidePage(UIPageType.LoadingUI);
         }
     }
 
@@ -73,8 +73,8 @@ public class ChangeCarUI : MonoBehaviour, IController {
 
         closeBtn.onClick.AddListener(() => {
             this.GetSystem<ISoundSystem>().PlaySound(SoundType.Close);
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.HomepageUI));
-            UIController.Instance.HidePage(UIPageType.ChangeCarUI);
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.HomepageUI));
+            this.GetSystem<IUISystem>().HidePage(UIPageType.ChangeCarUI);
         });
 
         this.RegisterEvent<ChangeCarEvent>(OnChangeCarEvent).UnRegisterWhenGameObjectDestroyed(gameObject);

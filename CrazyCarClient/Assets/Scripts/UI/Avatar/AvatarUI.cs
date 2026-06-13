@@ -22,16 +22,16 @@ public class AvatarUI : MonoBehaviour, IController {
 
     private async void OnEnable() {
         avatarModel = this.GetModel<IAvatarModel>();
-        UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.LoadingUI, UILevelType.Alart));
+        this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.LoadingUI, UILevelType.Alart));
         var result = await this.GetSystem<INetworkSystem>()
             .Post(url: this.GetSystem<INetworkSystem>().HttpBaseUrl + RequestUrl.avatarUrl,
                 this.GetModel<IGameModel>().Token.Value);
         if (result.serverCode == 200) {
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.LoadingUI, UILevelType.Alart));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.LoadingUI, UILevelType.Alart));
             curAid = this.GetModel<IUserModel>().Aid.Value;
             await this.GetSystem<IDataParseSystem>().ParseAvatarRes(result.serverData);
             await UpdataUI();
-            UIController.Instance.HidePage(UIPageType.LoadingUI);
+            this.GetSystem<IUISystem>().HidePage(UIPageType.LoadingUI);
         }
     }
 
@@ -64,7 +64,7 @@ public class AvatarUI : MonoBehaviour, IController {
 
         closeBtn.onClick.AddListener(() => {
             this.GetSystem<ISoundSystem>().PlaySound(SoundType.Button_Low);
-            UIController.Instance.HidePage(UIPageType.AvatarUI);
+            this.GetSystem<IUISystem>().HidePage(UIPageType.AvatarUI);
             this.SendCommand<UpdateHomepageUICommand>();
         });
 

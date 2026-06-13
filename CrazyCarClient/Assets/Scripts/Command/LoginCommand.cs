@@ -37,16 +37,16 @@ public class LoginCommand : AbstractCommand {
                 this.SendCommand<RecodeLoginCommand>();
                 this.SendCommand(new LoadSceneCommand(SceneID.Index));
             });
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, info));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, info));
         } else if (result.serverCode == 423) {
             WarningAlertInfo info = new WarningAlertInfo("Password Error");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, info));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, info));
         } else if (result.serverCode == 404) {
             WarningAlertInfo alertInfo = new WarningAlertInfo("User not registered");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
         } else {
             WarningAlertInfo alertInfo = new WarningAlertInfo("Unknown Error");
-            UIController.Instance.ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
+            this.GetSystem<IUISystem>().ShowPage(new ShowPageInfo(UIPageType.WarningAlert, UILevelType.Alart, alertInfo));
         }
     }
 }
